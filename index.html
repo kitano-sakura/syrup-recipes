@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e94a5a" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>今月のシロップ帖</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">5月のシロップ特集</p>
+          <h1>しあわせ果実でつくる、今月の一杯。</h1>
+          <p class="lead">
+            果肉入りシロップを割るだけ。炭酸、ミルク、お茶、ノンアルで楽しめるレシピ集。
+          </p>
+        </div>
+        <div class="bottle-card" aria-label="いちごシロップのおすすめ比率">
+          <div class="ratio">1:2</div>
+          <div class="bottle">
+            <span class="cap"></span>
+            <span class="neck"></span>
+            <span class="body"></span>
+            <span class="label">いちご</span>
+          </div>
+          <p>シロップ 1<br />割り材 2</p>
+        </div>
+      </header>
+
+      <main>
+        <section class="feature-panel" id="featurePanel">
+          <div>
+            <p class="section-kicker">まずはこれ</p>
+            <h2 id="featuredName">いちごスカッシュ</h2>
+            <p id="featuredCopy">果肉感と炭酸で、いちばん伝わりやすい定番の一杯。</p>
+            <div class="chip-row" id="featuredTags"></div>
+          </div>
+          <button class="primary-action" id="openFeatured" type="button">作り方を見る</button>
+        </section>
+
+        <section class="quick-edit">
+          <button class="ghost-action" id="editFeature" type="button">今月の表示を編集</button>
+          <button class="ghost-action" id="installApp" type="button" hidden>ホーム画面に追加</button>
+        </section>
+
+        <section class="controls" aria-label="レシピ検索">
+          <label class="search-box">
+            <span>検索</span>
+            <input id="searchInput" type="search" placeholder="炭酸、ミルク、夜、さっぱり..." autocomplete="off" />
+          </label>
+          <div class="filter-row" id="filterRow" aria-label="タグで絞り込み"></div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">レシピ</p>
+              <h2>シロップアイデア</h2>
+            </div>
+            <span id="resultCount"></span>
+          </div>
+          <div class="recipe-list" id="recipeList"></div>
+        </section>
+
+        <section class="note-panel">
+          <div>
+            <p class="section-kicker">商品メモ</p>
+            <h2>提案シートも一緒に確認</h2>
+            <p>店頭POPやスタッフ共有用の元ネタとして、今回のシロップ提案画像を入れています。</p>
+          </div>
+          <img src="./assets/strawberry-syrup-reference.png" alt="しあわせ果実 七福神プレミアムシロップシリーズの提案シート" />
+        </section>
+      </main>
+    </div>
+
+    <dialog id="recipeDialog">
+      <article class="dialog-card">
+        <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="閉じる">×</button>
+        <p class="section-kicker" id="dialogCategory"></p>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogCopy"></p>
+        <div class="detail-grid">
+          <div>
+            <h3>材料</h3>
+            <ul id="dialogIngredients"></ul>
+          </div>
+          <div>
+            <h3>作り方</h3>
+            <ol id="dialogSteps"></ol>
+          </div>
+        </div>
+        <button class="primary-action full" id="favoriteButton" type="button">お気に入りに追加</button>
+      </article>
+    </dialog>
+
+    <dialog id="editDialog">
+      <form class="dialog-card" method="dialog">
+        <button class="icon-button close-dialog" value="cancel" type="submit" aria-label="閉じる">×</button>
+        <p class="section-kicker">今月の表示</p>
+        <h2>特集を差し替える</h2>
+        <label>
+          見出し
+          <input id="editHeadline" type="text" />
+        </label>
+        <label>
+          ひとこと
+          <textarea id="editLead" rows="3"></textarea>
+        </label>
+        <label>
+          まず見せるレシピ
+          <select id="editFeaturedRecipe"></select>
+        </label>
+        <div class="dialog-actions">
+          <button class="ghost-action" id="resetFeature" type="button">初期に戻す</button>
+          <button class="primary-action" id="saveFeature" value="default" type="submit">保存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
