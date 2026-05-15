@@ -125,7 +125,7 @@ h1 {
 }
 
 .bottle-card strong {
-  display: block;
+  display: none;
   max-width: 100%;
   color: var(--ink);
   font-size: 0.95rem;
@@ -136,18 +136,19 @@ h1 {
 }
 
 .product-hero-image {
-  height: 150px;
-  width: 76px;
+  height: 170px;
+  width: 72px;
   display: grid;
   place-items: center;
   overflow: visible;
 }
 
 .product-hero-image img {
-  width: 100%;
+  display: block;
+  width: auto;
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
   filter: drop-shadow(0 8px 14px rgba(72, 33, 25, 0.18));
 }
 
@@ -488,8 +489,8 @@ ol {
   }
 
   .product-hero-image {
-    width: 86px;
-    height: 172px;
+    width: 78px;
+    height: 176px;
   }
 
   main {
