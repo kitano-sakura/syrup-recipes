@@ -299,11 +299,21 @@ els.installApp.addEventListener("click", async () => {
   els.installApp.hidden = true;
 });
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js");
-  });
+async function clearOfflineCache() {
+  if ("serviceWorker" in navigator) {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+    await Promise.all(registrations.map((registration) => registration.unregister()));
+  }
+
+  if ("caches" in window) {
+    const keys = await caches.keys();
+    await Promise.all(keys.map((key) => caches.delete(key)));
+  }
 }
+
+window.addEventListener("load", () => {
+  clearOfflineCache().catch(() => {});
+});
 
 renderFeature();
 renderFilters();

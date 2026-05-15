@@ -19,3 +19,7 @@ GitHub Pagesでは `https://kitano-sakura.github.io/syrup-recipes/` で公開し
 - レシピは `app.js` の `recipes` にあります。
 - 今月の見出しと最初に出すレシピは、アプリ内の「今月の表示を編集」から変更できます。
 - 画像は `assets/strawberry-syrup-reference.png` です。
+
+## キャッシュ方針
+
+季節ごとの更新をすぐ反映しやすくするため、Service Workerによるオフラインキャッシュは使わない構成です。
