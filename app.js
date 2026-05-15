@@ -1,7 +1,7 @@
 const defaultFeature = {
   headline: "今月のノンアル",
   lead: "10種類のシロップから、朝食、ランチ、夜のノンアルまで使い方を探せるレシピ集。",
-  featuredRecipeId: "sour"
+  featuredRecipeId: "ichigo-squash"
 };
 
 const products = [
