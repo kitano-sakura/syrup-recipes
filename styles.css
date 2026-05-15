@@ -131,6 +131,8 @@ h1 {
   font-size: 0.95rem;
   font-weight: 900;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .product-hero-image {
@@ -138,12 +140,14 @@ h1 {
   width: 58px;
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 
 .product-hero-image img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
   filter: drop-shadow(0 8px 14px rgba(72, 33, 25, 0.18));
 }
 
@@ -253,9 +257,7 @@ main {
 }
 
 .quick-edit {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  display: none;
 }
 
 .ghost-action {
@@ -384,11 +386,12 @@ main {
 
 .note-panel img {
   width: 100%;
-  max-height: 260px;
-  object-fit: cover;
+  max-height: 420px;
+  object-fit: contain;
   object-position: top left;
   border-radius: 8px;
   border: 1px solid var(--line);
+  background: #fff;
 }
 
 dialog {
@@ -485,8 +488,8 @@ ol {
   }
 
   .product-hero-image {
-    width: 76px;
-    height: 138px;
+    width: 68px;
+    height: 126px;
   }
 
   main {

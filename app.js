@@ -1,7 +1,7 @@
 const defaultFeature = {
-  headline: "シロップでつくる、今月の一杯。",
+  headline: "今月のノンアル",
   lead: "10種類のシロップから、朝食、ランチ、夜のノンアルまで使い方を探せるレシピ集。",
-  featuredRecipeId: "ichigo-squash"
+  featuredRecipeId: "sour"
 };
 
 const products = [
@@ -138,10 +138,10 @@ const products = [
     image: "./assets/products/non-lemon.png",
     ratio: "1:4",
     family: "dry",
-    taste: ["酸っぱい", "ドライ", "果肉感", "生搾りレモン"],
+    taste: ["酸っぱい", "ドライ", "果肉感", "生搾りレモン", "甘くない"],
     months: ["通年", "夏"],
-    scenes: ["居酒屋", "レストラン", "イタリアン", "バーベキュー", "野外", "ゴルフ場", "朝食", "ランチ", "カフェ", "ホテル", "ノンアル", "デザート"],
-    tags: ["居酒屋", "レストラン", "イタリアン", "バーベキュー", "野外", "ゴルフ場", "朝", "夜", "ドライ", "酸味", "苦味", "炭酸", "ノンアル", "トニックウォーター", "紅茶"],
+    scenes: ["居酒屋", "レストラン", "イタリアン", "バーベキュー", "野外", "ゴルフ場", "朝食", "ランチ", "カフェ", "ホテル", "ノンアル", "デザート", "レモンサワー代替"],
+    tags: ["居酒屋", "レストラン", "イタリアン", "バーベキュー", "野外", "ゴルフ場", "朝", "夜", "ドライ", "酸味", "苦味", "炭酸", "ノンアル", "トニックウォーター", "紅茶", "甘くない", "レモンサワー", "ジンジャーエール", "コーラ", "ウーロン茶", "酢", "塩", "生姜", "ノンアルビール"],
     note: "開封後要冷蔵、2〜3ヶ月目安",
     color: "#2b8a94"
   }
@@ -226,6 +226,116 @@ const customRecipes = [
     copy: "甘くないノンアル提案の主役。居酒屋や食事シーンに出しやすい一杯。",
     ingredients: ["のんある鬼レモン 30ml", "炭酸水 120ml", "氷 適量"],
     steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "炭酸水を加える", "軽く混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-squash",
+    name: "ドライレモンスカッシュ",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "炭酸", "甘くない", "レモンサワー", "居酒屋", "夜", "ノンアル"],
+    copy: "檸檬サワーの代わりを探しているお店に。甘さ控えめで食事に合わせやすい定番。",
+    ingredients: ["のんある鬼レモン 30ml", "炭酸水 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "炭酸水をゆっくり加える", "泡をつぶさないように軽く混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-juice",
+    name: "ドライレモンジュース",
+    category: "水割り",
+    ratio: "1:4",
+    tags: ["ドライ", "水", "朝", "ランチ", "甘くない", "ノンアル"],
+    copy: "水で割るだけのシンプルな一杯。朝食やランチにも出しやすい、すっきりレモン。",
+    ingredients: ["のんある鬼レモン 30ml", "水 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "水を加える", "しっかり混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-ginger",
+    name: "ドライレモンジンジャー",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "ジンジャーエール", "炭酸", "夜", "甘くない", "ノンアル"],
+    copy: "ジンジャーエールで割って、辛口寄りのレモンジンジャーに。",
+    ingredients: ["のんある鬼レモン 30ml", "ジンジャーエール 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "ジンジャーエールを加える", "軽く混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-cola",
+    name: "ドライレモンコーラ",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "コーラ", "炭酸", "夜", "バーベキュー", "ノンアル"],
+    copy: "コーラにレモンの酸味と果肉感を足して、クラフト感のあるドライコークに。",
+    ingredients: ["のんある鬼レモン 30ml", "コーラ 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "コーラを加える", "泡を見せるように仕上げる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-tea",
+    name: "ドライレモンティー",
+    category: "お茶",
+    ratio: "1:4",
+    tags: ["ドライ", "紅茶", "ウーロン茶", "朝", "ランチ", "甘くない", "ノンアル"],
+    copy: "ウーロン茶や無糖紅茶で割る、甘さを抑えたビターシトラスティー。",
+    ingredients: ["のんある鬼レモン 30ml", "ウーロン茶または無糖紅茶 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "お茶を加える", "香りが立つように混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-vinegar",
+    name: "ドライレモンビネガー",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "酢", "炭酸", "酸味", "さっぱり", "ノンアル"],
+    copy: "酢を少し足して、酸味をきかせた大人向けのレモンビネガー。",
+    ingredients: ["のんある鬼レモン 30ml", "酢 小さじ1", "炭酸水 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンと酢を入れる", "炭酸水を加える", "軽く混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-salty",
+    name: "ドライレモンソルティスカッシュ",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "塩", "炭酸", "野外", "ゴルフ場", "さっぱり", "ノンアル"],
+    copy: "塩をひとつまみ。暑い日や屋外シーンで提案しやすいソルティドライレモン。",
+    ingredients: ["のんある鬼レモン 30ml", "塩 ひとつまみ", "炭酸水 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンと塩を入れる", "炭酸水を加える", "軽く混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-fresh-ginger",
+    name: "ドライレモンジンジャーその2",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "生姜", "炭酸", "夜", "辛口", "ノンアル"],
+    copy: "すりおろし生姜を合わせて、より辛口に寄せたドライジンジャー。",
+    ingredients: ["のんある鬼レモン 30ml", "すりおろし生姜 少し", "炭酸水 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンと生姜を入れる", "炭酸水を加える", "よく混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-tonic",
+    name: "ドライレモントニック",
+    category: "炭酸",
+    ratio: "1:4",
+    tags: ["ドライ", "トニックウォーター", "苦味", "夜", "ノンアル"],
+    copy: "トニックウォーターの苦味で、さらに甘くない印象に。",
+    ingredients: ["のんある鬼レモン 30ml", "トニックウォーター 120ml", "氷 適量"],
+    steps: ["グラスに氷を入れる", "のんある鬼レモンを注ぐ", "トニックウォーターを加える", "下から一度だけ混ぜる"]
+  },
+  {
+    productId: "non-lemon",
+    id: "dry-beer",
+    name: "ドライレモンビア",
+    category: "ノンアルビール",
+    ratio: "1:4",
+    tags: ["ドライ", "ノンアルビール", "夜", "居酒屋", "甘くない", "ノンアル"],
+    copy: "ノンアルビールにレモンの酸味を足して、食事に合わせやすい一杯に。",
+    ingredients: ["のんある鬼レモン 30ml", "ノンアルビール 120ml", "氷 適量"],
+    steps: ["冷えたグラスにのんある鬼レモンを入れる", "ノンアルビールを注ぐ", "泡を残すように軽く混ぜる"]
   }
 ];
 
@@ -258,7 +368,24 @@ const recipes = [
   })
 ];
 
-const tagFilters = ["すべて", "朝", "夜", "ホテル", "居酒屋", "炭酸", "ミルク", "紅茶", "飲むヨーグルト", "トニックウォーター", "ホット", "ドライ"];
+const tagFilters = ["すべて", "朝", "夜", "ホテル", "居酒屋", "炭酸", "ミルク", "紅茶", "飲むヨーグルト", "トニックウォーター", "ホット", "ドライ", "甘くない"];
+
+const referenceSheets = {
+  "non-lemon": {
+    kicker: "のんある鬼レモン",
+    title: "甘くないノンアル提案",
+    copy: "檸檬サワーの代わりを探しているお店向けに、鬼レモンの使い方をまとめた提案シートです。",
+    image: "./assets/non-lemon-reference.png",
+    alt: "しあわせ果実 のんある鬼サワーの素シリーズの提案シート"
+  },
+  default: {
+    kicker: "商品メモ",
+    title: "提案シートも一緒に確認",
+    copy: "店頭POPやスタッフ共有用にどうぞ、今回のシロップ提案画像を入れています。",
+    image: "./assets/strawberry-syrup-reference.png",
+    alt: "しあわせ果実 七福神プレミアムシロップシリーズの提案シート"
+  }
+};
 
 const els = {
   heroTitle: document.querySelector("h1"),
@@ -277,6 +404,10 @@ const els = {
   filterRow: document.querySelector("#filterRow"),
   recipeList: document.querySelector("#recipeList"),
   resultCount: document.querySelector("#resultCount"),
+  referenceKicker: document.querySelector("#referenceKicker"),
+  referenceTitle: document.querySelector("#referenceTitle"),
+  referenceCopy: document.querySelector("#referenceCopy"),
+  referenceImage: document.querySelector("#referenceImage"),
   recipeDialog: document.querySelector("#recipeDialog"),
   closeDialog: document.querySelector("#closeDialog"),
   dialogProductImage: document.querySelector("#dialogProductImage"),
@@ -300,8 +431,7 @@ let selectedRecipe = null;
 let deferredInstallPrompt = null;
 
 const getFeature = () => {
-  const saved = localStorage.getItem("syrup-feature");
-  return saved ? { ...defaultFeature, ...JSON.parse(saved) } : defaultFeature;
+  return defaultFeature;
 };
 
 const getFavorites = () => JSON.parse(localStorage.getItem("syrup-favorites") || "[]");
@@ -345,9 +475,23 @@ function renderProducts() {
       activeProduct = product.id;
       renderProducts();
       renderRecipes();
+      renderReferencePanel();
     };
     els.productRow.append(button);
   });
+}
+
+function renderReferencePanel() {
+  const feature = getFeature();
+  const featuredRecipe = recipes.find((item) => item.id === feature.featuredRecipeId) || recipes[0];
+  const currentProductId = activeProduct === "all" ? featuredRecipe.productId : activeProduct;
+  const sheet = referenceSheets[currentProductId] || referenceSheets.default;
+
+  els.referenceKicker.textContent = sheet.kicker;
+  els.referenceTitle.textContent = sheet.title;
+  els.referenceCopy.textContent = sheet.copy;
+  els.referenceImage.src = sheet.image;
+  els.referenceImage.alt = sheet.alt;
 }
 
 function renderFilters() {
@@ -517,3 +661,4 @@ renderFeature();
 renderProducts();
 renderFilters();
 renderRecipes();
+renderReferencePanel();
