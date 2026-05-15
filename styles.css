@@ -136,11 +136,11 @@ h1 {
 }
 
 .product-hero-image {
-  height: 116px;
-  width: 58px;
+  height: 150px;
+  width: 76px;
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .product-hero-image img {
@@ -488,8 +488,8 @@ ol {
   }
 
   .product-hero-image {
-    width: 68px;
-    height: 126px;
+    width: 86px;
+    height: 172px;
   }
 
   main {
