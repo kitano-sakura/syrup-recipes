@@ -21,14 +21,12 @@
             果肉入りシロップを割るだけ。炭酸、ミルク、紅茶、ノンアルで楽しめるレシピ集。
           </p>
         </div>
-        <div class="bottle-card" aria-label="いちごシロップのおすすめ比率">
-          <div class="ratio">1:2</div>
-          <div class="bottle">
-            <span class="cap"></span>
-            <span class="neck"></span>
-            <span class="body"></span>
-            <span class="label">いちご</span>
+        <div class="bottle-card" aria-label="おすすめ商品の比率">
+          <div class="ratio" id="heroRatio">1:2</div>
+          <div class="product-hero-image">
+            <img id="heroProductImage" src="./assets/products/ichigo.png" alt="しあわせ果実 七福神プレミアムシロップ いちご" />
           </div>
+          <strong id="heroProductName">いちご</strong>
           <p>シロップ 1<br />割り材 2</p>
         </div>
       </header>
@@ -52,12 +50,13 @@
         <section class="controls" aria-label="レシピ検索">
           <label class="search-box">
             <span>検索</span>
-            <input id="searchInput" type="search" placeholder="炭酸、ミルク、夜、さっぱり..." autocomplete="off" />
+            <input id="searchInput" type="search" placeholder="朝、ホテル、炭酸、トニック..." autocomplete="off" />
           </label>
+          <div class="product-row" id="productRow" aria-label="商品で絞り込み"></div>
           <div class="filter-row" id="filterRow" aria-label="タグで絞り込み"></div>
         </section>
 
-        <section>
+        <section class="recipe-section">
           <div class="section-heading">
             <div>
               <p class="section-kicker">レシピ</p>
@@ -82,6 +81,7 @@
     <dialog id="recipeDialog">
       <article class="dialog-card">
         <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="閉じる">×</button>
+        <img class="dialog-product-image" id="dialogProductImage" src="./assets/products/ichigo.png" alt="" />
         <p class="section-kicker" id="dialogCategory"></p>
         <h2 id="dialogTitle"></h2>
         <p id="dialogCopy"></p>

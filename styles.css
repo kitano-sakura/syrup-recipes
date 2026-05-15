@@ -114,59 +114,6 @@ h1 {
   font-weight: 900;
 }
 
-.bottle {
-  position: relative;
-  width: 54px;
-  height: 138px;
-}
-
-.bottle span {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cap {
-  width: 28px;
-  height: 10px;
-  top: 0;
-  border-radius: 3px;
-  background: #b9b0a8;
-}
-
-.neck {
-  width: 24px;
-  height: 42px;
-  top: 9px;
-  border: 2px solid #d7cec5;
-  border-bottom: 0;
-  background: rgba(255, 255, 255, 0.68);
-}
-
-.body {
-  width: 52px;
-  height: 92px;
-  bottom: 0;
-  border-radius: 13px 13px 9px 9px;
-  border: 2px solid #d7cec5;
-  background:
-    radial-gradient(circle at 38% 55%, rgba(255, 255, 255, 0.68) 0 2px, transparent 3px),
-    radial-gradient(circle at 66% 68%, rgba(255, 255, 255, 0.6) 0 2px, transparent 3px),
-    linear-gradient(180deg, #f06b51, #d73647);
-}
-
-.label {
-  width: 40px;
-  height: 30px;
-  bottom: 24px;
-  border: 1px solid rgba(35, 24, 22, 0.2);
-  background: #fffaf3;
-  display: grid;
-  place-items: center;
-  font-size: 0.7rem;
-  font-weight: 800;
-}
-
 .bottle-card p {
   margin: 0;
   color: var(--muted);
@@ -174,6 +121,29 @@ h1 {
   font-weight: 700;
   text-align: center;
   line-height: 1.45;
+}
+
+.bottle-card strong {
+  display: block;
+  max-width: 100%;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.product-hero-image {
+  height: 140px;
+  width: 72px;
+  display: grid;
+  place-items: center;
+}
+
+.product-hero-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(72, 33, 25, 0.18));
 }
 
 main {
@@ -212,6 +182,7 @@ main {
 }
 
 .chip-row,
+.product-row,
 .filter-row {
   display: flex;
   gap: 8px;
@@ -221,11 +192,13 @@ main {
 }
 
 .chip-row::-webkit-scrollbar,
+.product-row::-webkit-scrollbar,
 .filter-row::-webkit-scrollbar {
   display: none;
 }
 
 .chip,
+.product-chip,
 .filter-chip {
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -237,6 +210,21 @@ main {
   padding: 8px 11px;
 }
 
+.product-chip {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px 6px 8px;
+}
+
+.product-chip img {
+  width: 20px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.product-chip.active,
 .filter-chip.active {
   border-color: transparent;
   background: var(--ink);
@@ -329,6 +317,10 @@ main {
   gap: 10px;
 }
 
+.recipe-section {
+  min-width: 0;
+}
+
 .recipe-card {
   width: 100%;
   text-align: left;
@@ -337,9 +329,25 @@ main {
   background: rgba(255, 255, 255, 0.92);
   padding: 14px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 42px 1fr auto;
   gap: 10px;
+  align-items: start;
   box-shadow: 0 8px 22px rgba(72, 33, 25, 0.08);
+}
+
+.recipe-card > img {
+  width: 34px;
+  height: 78px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.recipe-product {
+  display: inline-block;
+  margin: 0 0 5px;
+  color: var(--berry-dark);
+  font-size: 0.75rem;
+  font-weight: 900;
 }
 
 .recipe-card h3 {
@@ -407,6 +415,14 @@ dialog::backdrop {
   gap: 14px;
 }
 
+.dialog-product-image {
+  width: 64px;
+  height: 140px;
+  object-fit: contain;
+  justify-self: center;
+  filter: drop-shadow(0 8px 14px rgba(72, 33, 25, 0.18));
+}
+
 .close-dialog {
   position: absolute;
   right: 12px;
@@ -467,6 +483,11 @@ ol {
     min-height: 330px;
   }
 
+  .product-hero-image {
+    width: 94px;
+    height: 168px;
+  }
+
   main {
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -475,6 +496,7 @@ ol {
   .feature-panel,
   .controls,
   .quick-edit,
+  .recipe-section,
   .note-panel {
     grid-column: 1 / -1;
   }
@@ -482,6 +504,5 @@ ol {
   .recipe-list {
     grid-column: 1 / -1;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: min(100%, 640px);
   }
 }
