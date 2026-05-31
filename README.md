@@ -12,7 +12,7 @@ python3 -m http.server 4173
 
 ブラウザで `http://localhost:4173/syrup-pwa/` を開きます。
 
-GitHub Pagesでは `https://kitano-sakura.jp/` で公開します。
+GitHub Pagesでは `https://kitano-sakura.github.io/syrup-recipes/` で公開します。
 
 ## 更新しやすい場所
 
